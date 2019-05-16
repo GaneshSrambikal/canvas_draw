@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="style.css">
+    <!-- <script src="/areaOf_triangle.js"></script> -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+        crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.4.1.js" integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU="
+        crossorigin="anonymous"></script>
+    <title>Document</title>
+</head>
+
+<body>
+    <div class="container">
+        <h2>draw a triangle</h2>
+        <canvas id="mycanvas" width="300" height="150" style="border:2px solid #6b7cc8;">
+
+        </canvas>
+    </div>
+    <div class="container">
+        <form>
+            <div class="form-group">
+                <!-- <label for="side1">start at</label>
+                <input type="text" id="x1">
+                <input type="text" id="y1">
+                <button id="side1_clear" class="btn-danger">clear</button> -->
+                <div class="input-group">
+                    <div class="input-group-prepend">
+                        <span class="input-group-text">Start At :</span>
+                    </div>
+                    <input type="text" id="x1" class="form-control">
+                    <input type="text" id="y1" class="form-control">
+                    <button id="side1_clear" class="btn-danger input-group-text">clear</button>
+                </div>
+
+            </div>
+
+            <div class="form-group">
+                    <div class="input-group">
+                            <div class="input-group-prepend">
+                                <span class="input-group-text">Side 1 :</span>
+                            </div>
+                            <input type="text" id="x2" class="form-control">
+                            <input type="text" id="y2" class="form-control">
+                            <button id="side2_clear" class="btn-danger input-group-text">clear</button>
+                        </div>
+            </div>
+            <div class="form-group">
+                    <div class="input-group">
+                            <div class="input-group-prepend">
+                                <span class="input-group-text">Side 2 :</span>
+                            </div>
+                            <input type="text" id="x3" class="form-control">
+                            <input type="text" id="y3" class="form-control">
+                            <button id="side2_clear" class="btn-danger input-group-text">clear</button>
+                        </div>
+            </div>
+            <div class="form-group">
+                    <div class="input-group">
+                            <div class="input-group-prepend">
+                                <span class="input-group-text">Side 3 :</span>
+                            </div>
+                            <input type="text" id="x4" class="form-control">
+                            <input type="text" id="y4" class="form-control">
+                            <button id="side3_clear" class="btn-danger input-group-text">clear</button>
+                        </div>
+            </div>
+            <div class="form-group">
+                <button value="submit" id="p" class="btn-success">Submit</button>
+                <button value="submit" id="clear" class="btn-danger">Clear</button>
+            </div>
+        </form>
+    </div>
+
+
+    <script>
+        var canvas = document.getElementById("mycanvas");
+        var ctx = canvas.getContext("2d");
+        ctx.font = "15px Arial";
+        ctx.fillStyle = "grey";
+        ctx.textAlign = "center";
+        ctx.fillText("figure adds here ..", canvas.width / 2, canvas.height / 2);
+
+        let $side1 = $('#x1');
+        let $side2 = $('#y1');
+        let $side3 = $('#x2');
+        let $side4 = $('#y2');
+        let $side5 = $('#x3');
+        let $side6 = $('#y3');
+        let $side7 = $('#x4');
+        let $side8 = $('#y4');
+
+        $("#p").click(function (x) {
+            x.preventDefault();
+            var canvas = document.getElementById("mycanvas");
+            var ctx = canvas.getContext("2d");
+            ctx.clearRect(0, 0, canvas.width, canvas.height);
+            let a = $side1.val(); //150
+            let b = $side2.val(); //40
+            let c = $side3.val(); //50
+            let d = $side4.val(); //100
+            let e = $side5.val(); //150
+            let f = $side6.val(); //100
+            let g = $side7.val(); //150
+            let h = $side8.val(); //40
+
+            var canvas = document.getElementById("mycanvas");
+            var ctx = canvas.getContext("2d");
+            ctx.beginPath();
+            ctx.moveTo(a, b);
+            ctx.lineTo(c, d);
+            ctx.lineTo(e, f);
+            ctx.lineTo(g, h);
+            ctx.stroke();
+            ctx.fillStyle = "red";
+        });
+
+        $("#clear").click(function (clr) {
+            var canvas = document.getElementById("mycanvas");
+            var ctx = canvas.getContext("2d");
+            ctx.clearRect(0, 0, canvas.width, canvas.height);
+            $side1.val('');
+            $side2.val('');
+            $side3.val('');
+            $side4.val('');
+            $side5.val('');
+            $side6.val('');
+            $side7.val('');
+            $side8.val('');
+        });
+
+        $("#side1_clear").click(function (clr) {
+            clr.preventDefault();
+            $side1.val('');
+            $side2.val('');
+        });
+        $("#side2_clear").click(function (clr) {
+            clr.preventDefault();
+            $side3.val('');
+            $side4.val('');
+        });
+        $("#side3_clear").click(function (clr) {
+            clr.preventDefault();
+            $side5.val('');
+            $side6.val('');
+        });
+        $("#side4_clear").click(function (clr) {
+            clr.preventDefault();
+            $side7.val('');
+            $side8.val('');
+        });
+
+
+
+    </script>
+</body>
+
+</html>
