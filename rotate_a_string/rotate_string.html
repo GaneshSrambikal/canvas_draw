@@ -1,0 +1,39 @@
+<html>
+<head>Rotate String
+<script src="https://code.jquery.com/jquery-3.4.1.js" integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU="
+        crossorigin="anonymous"></script>
+</head>
+<body>
+	<input type="text" id ="text"><br>
+	<label>typed string:</label>
+	<p id ="typed"></p>
+	<label>rotated string:</label>
+	<p id ="processed"></p>
+
+<button id="submit" onclick="func()" >
+Submit
+</button>
+<script>
+	function func(){
+	let text = $("#text");
+	let typed = $("#typed");
+	let processed = $("#processed");
+		
+	let word = text.val();
+	let result="";
+	console.log(word);
+	typed.html(text.val());
+	
+	for(let i=word.length-1;i>=0;i--){
+	result +=word[i];
+	};
+
+	console.log(result);
+	
+	processed.html(result+'<br>');
+		
+};
+
+</script>
+</body>
+</html>
