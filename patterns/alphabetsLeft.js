@@ -16,6 +16,7 @@ readline.question("Enter a number of rows: ", num =>{
         string+='\n'
         
     }
+    
     console.log(string)
    
     readline.close()
