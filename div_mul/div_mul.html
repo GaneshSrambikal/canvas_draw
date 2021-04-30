@@ -1,0 +1,26 @@
+<html>
+<head>
+ <script src="https://code.jquery.com/jquery-3.4.1.js" integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU="
+        crossorigin="anonymous"></script>
+</head>
+<body>
+	<input type="text" id="value1">
+	<input type="text" id="value2">
+	<button onclick="func()">Submit</button><br>
+	<label>division is: </label>
+	<p id="division"></p>
+	
+	<script>
+		function func(){
+		let a = document.getElementById("value1");
+		let b =document.getElementById("value2");
+		let mul = a*b;
+		let div = a/b;
+		let division =document.getElementById("division"); 
+		let mutliple =document.getElementById("multiple");
+		console.log(division.val());
+		};
+	</script>
+	
+</body>
+</html>

@@ -1,0 +1,21 @@
+<html>
+<head>
+
+</head>
+<body>
+	<input type="text" id="value1">
+	<input type="text" id="value2">
+	<button onclick="func()">Submit</button>
+	
+	<script>
+		function func(){
+		let a = $(#value1).val();
+		let b = $(#value2).val();
+		let mul = a*b;
+		let div = a/b;
+		$(#multiple).html(mul); 
+		};
+	</script>
+	
+</body>
+</html>
