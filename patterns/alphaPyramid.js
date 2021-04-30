@@ -13,3 +13,11 @@ for(let i=1; i<=5; i++){
 
 }
 console.log(string)
+
+/*
+i j k string
+1 0 0       A
+2 1 1     A B C
+3 2 2   A B C D E
+4 3 3 A B C D E F G
+*/
