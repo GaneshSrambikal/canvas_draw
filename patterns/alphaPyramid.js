@@ -5,7 +5,7 @@ for(let i=1; i<=5; i++){
         string+=' '    
        
     }
-    for(k=0; k< 2 * i - 1; k++){
+    for(k=0; k< 2 * i - 2; k++){
         string+=String.fromCharCode(65+k)
        }
     string+='\n'

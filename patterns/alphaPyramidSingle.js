@@ -14,6 +14,8 @@ for(let i =0; i<=5; i++){
 console.log(string)
 
 
+
+
 /*
 i j k string
 1 0 0       A
