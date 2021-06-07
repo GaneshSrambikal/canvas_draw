@@ -1,14 +1,15 @@
-// function reverseMyString(){
-//     let strArr = str.split(' ,')
+// function reverseMyString(str){
+//     for(var newStr ="",i =str.length - 1;i>=0;i--){
+//         newStr+=str[i];
+//     }
+
+//     return newStr
 // }
-let str = 'hello world'
-let strArr = str.split('')
-let newStr = strArr.reverse();
-let finalStr = ''
-for(let i=0; i < newStr.length;i++){
-    finalStr+=newStr[i];
-    
+
+function reverseMyString(str){
+    return str.split('').reverse().join('')
 }
 
 
-console.log(newStr ,finalStr);
+
+console.log(reverseMyString('hello world!'));
